@@ -1,28 +1,21 @@
 package edu.auburn.csse.akm0012.futurelab_play;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.app.Activity;
 import android.view.Menu;
-import android.view.View;
 
-public class LoginActivity extends Activity {
+public class ModuleSelectorActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
-	}
-	
-	public void goToModuleSelector(View view) {
-		Intent intent = new Intent(this, ModuleSelectorActivity.class);
-		startActivity(intent);
+		setContentView(R.layout.activity_module_selector);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login, menu);
+		getMenuInflater().inflate(R.menu.module_selector, menu);
 		return true;
 	}
 
