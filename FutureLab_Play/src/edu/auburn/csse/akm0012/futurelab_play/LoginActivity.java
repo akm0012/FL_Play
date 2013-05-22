@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 
 public class LoginActivity extends Activity {
 
@@ -45,13 +46,17 @@ public class LoginActivity extends Activity {
 	
 	private void addPasswordConfirmField() {
 		
+		// Set the Layout parameters for the new EditText
+		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		layoutParams.addRule(RelativeLayout.BELOW, R.id.PasswordField);
+		layoutParams.addRule(RelativeLayout.ALIGN_LEFT, R.id.PasswordField);
+		
+		
 		EditText confirmPasswordField = new EditText(this);
 		confirmPasswordField.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
 		confirmPasswordField.setHint("Confirm Password");
 		confirmPasswordField.setEms(10);
-		confirmPasswordField.setTop(passwordField.getBottom());
-		//confirmPasswordField.addRule();
-		loginLayout.addView(confirmPasswordField);
+		loginLayout.addView(confirmPasswordField, layoutParams);
 		
 	}
 	
