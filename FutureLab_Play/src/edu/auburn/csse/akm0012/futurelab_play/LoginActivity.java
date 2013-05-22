@@ -1,6 +1,7 @@
 package edu.auburn.csse.akm0012.futurelab_play;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
@@ -14,8 +15,11 @@ import android.widget.RelativeLayout.LayoutParams;
 public class LoginActivity extends Activity {
 
 	private RelativeLayout loginLayout;
-	private EditText userNameField, passwordField;
+	private EditText userNameField, passwordField, confirmPasswordField;
 	private Button newUserButton, logInButton;
+	
+	//Used to make 
+	private boolean isNewUser;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +35,24 @@ public class LoginActivity extends Activity {
 		
 		loginLayout = (RelativeLayout) findViewById(R.id.LoginLayout);
 		
+		isNewUser = false;
+				
+		// User wants to create a new User Name
 		newUserButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Create new Confirm Password Field
             	
-            	addPasswordConfirmField();
+            	if (!isNewUser)
+            	{
+            		addPasswordConfirmField();
+            	}
             	
-            	//EditText confirmPassword = new EditText(this);
-            	
+            	// Put the "Register" method here
+            	else
+            	{
+            		// Place holder
+            		executeLogin();
+            	}
             	
             }
         });	
@@ -52,12 +66,25 @@ public class LoginActivity extends Activity {
 		layoutParams.addRule(RelativeLayout.ALIGN_LEFT, R.id.PasswordField);
 		
 		
-		EditText confirmPasswordField = new EditText(this);
+		confirmPasswordField = new EditText(this);
 		confirmPasswordField.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
 		confirmPasswordField.setHint("Confirm Password");
 		confirmPasswordField.setEms(10);
 		loginLayout.addView(confirmPasswordField, layoutParams);
 		
+		loginLayout.removeView(logInButton);
+		
+		//Set some boolean so we know the "New User" button has changed to a "Register Button"
+		isNewUser = true;
+		
+		newUserButton.setText("Register");
+		
+	}
+	
+	//Used as a placeholder, may not be necessary. 
+	public void executeLogin() {
+		Intent intent = new Intent(this, ModuleSelectorActivity.class);
+		startActivity(intent);
 	}
 	
 	public void executeLogin(View view) {
