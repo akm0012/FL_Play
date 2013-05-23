@@ -40,17 +40,16 @@ public class LoginActivity extends Activity {
 		// User wants to create a new User Name
 		newUserButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Create new Confirm Password Field
             	
             	if (!isNewUser)
             	{
+            		// Create new Confirm Password Field
             		addPasswordConfirmField();
             	}
             	
-            	// Put the "Register" method here
             	else
             	{
-            		// Place holder
+            		// Put the "Register" method here
             		executeLogin();
             	}
             	
