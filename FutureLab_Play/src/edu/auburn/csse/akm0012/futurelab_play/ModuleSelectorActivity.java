@@ -1,10 +1,10 @@
 package edu.auburn.csse.akm0012.futurelab_play;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 
-public class ModuleSelectorActivity extends Activity {
+public class ModuleSelectorActivity extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

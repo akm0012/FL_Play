@@ -37,7 +37,7 @@ public class LoginActivity extends Activity {
 		
 		isNewUser = false;
 				
-		// User wants to create a new User Name
+		// User clicks the "New User" button
 		newUserButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	
