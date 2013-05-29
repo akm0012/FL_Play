@@ -1,9 +1,7 @@
 package edu.auburn.csse.akm0012.futurelab_play;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.View;
@@ -12,7 +10,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends FragmentActivity {
 
 	private RelativeLayout loginLayout;
 	private EditText userNameField, passwordField, confirmPasswordField;
@@ -82,13 +80,13 @@ public class LoginActivity extends Activity {
 	
 	//Used as a placeholder, may not be necessary. 
 	public void executeLogin() {
-		Intent intent = new Intent(this, ModuleSelectorActivity.class);
-		startActivity(intent);
+		//Intent intent = new Intent(this, ModuleSelectorActivity.class);
+		//startActivity(intent);
 	}
 	
 	public void executeLogin(View view) {
-		Intent intent = new Intent(this, ModuleSelectorActivity.class);
-		startActivity(intent);
+		//Intent intent = new Intent(this, ModuleSelectorActivity.class);
+		//startActivity(intent);
 	}
 	
 	public void createNewUser(View view) {

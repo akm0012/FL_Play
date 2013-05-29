@@ -79,7 +79,6 @@
         android:name="edu.auburn.csse.akm0012.futurelab_play.TestFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/activity_side_panel_fragment" />
+        android:layout_weight="1"/>
 
 </LinearLayout>
