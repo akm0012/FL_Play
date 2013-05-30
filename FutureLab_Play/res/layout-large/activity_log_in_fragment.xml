@@ -43,7 +43,6 @@
         android:layout_below="@+id/PasswordField"
         android:layout_alignLeft="@+id/PasswordField"
         android:layout_marginTop="75dp"
-        android:onClick="createNewUser"
         android:text="New User?" />
     
     <Button
@@ -54,7 +53,6 @@
         android:layout_toRightOf="@+id/NewUserButton"
         android:layout_marginTop="75dp"
         android:layout_marginLeft="15dp"
-        android:onClick="executeLogin"
         android:text="Log In" />
     
     <ImageView
